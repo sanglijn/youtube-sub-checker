@@ -109,6 +109,6 @@ if __name__ == '__main__':
   # When running locally, disable OAuthlib's HTTPs verification. When
   # running in production *do not* leave this option enabled.
   os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '0'
-  app.run(host='localhost',  # Establishes the host, required for repl to detect the site
-		port=int(5000)  # Randomly select the port the machine hosts on.
+  app.run(host='0.0.0.0',  # Establishes the host, required for repl to detect the site
+		port=random.randint(2000, 9000)  # Randomly select the port the machine hosts on.
 	)
